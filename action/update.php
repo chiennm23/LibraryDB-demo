@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $category = $_REQUEST['category'];
     $description = $_REQUEST['description'];
     $books = new Books($category_id, $category, $description);
-    $books->setCategoryId($category_id);
     $bookCategory->update($books);
     header('location:../index.php');
 }
